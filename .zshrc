@@ -5,7 +5,12 @@ source ~/.config/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # fnm
-FNM_PATH="~/Library/Application Support/fnm"
+ 
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  FNM_PATH="$HOME/.fnm"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  FNM_PATH="~/Library/Application Support/fnm"
+fi
 eval "$(fnm env)"
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
