@@ -1,0 +1,6 @@
+[font]
+normal = { family = "CommitMono Nerd Font", style = "Regular" }
+size = 14
+
+[window]
+dimensions = { columns = 150, lines = 60 }
