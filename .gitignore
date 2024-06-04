@@ -2,3 +2,5 @@ antigen/bundles/*
 antigen/init.zsh
 antigen/init.zsh.zwc
 antigen/.resources
+antigen/.zcompdump
+antigen/debug.log
