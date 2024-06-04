@@ -1,1 +1,4 @@
 antigen/bundles/*
+antigen/init.zsh
+antigen/init.zsh.zwc
+antigen/.resources
