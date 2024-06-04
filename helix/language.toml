@@ -1,4 +1,0 @@
-[[language]] 
-name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript", "--printWidith", "100"] }
-auto-format = true
