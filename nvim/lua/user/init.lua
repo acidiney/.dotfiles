@@ -1,4 +1,4 @@
 return {
-  colorscheme = "tokyonight"
+  colorscheme = "tokyonight-storm",
 }
 
