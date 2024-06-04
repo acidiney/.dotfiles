@@ -1,6 +1,11 @@
+
+import = [
+    "~/.config/alacritty/themes/themes/tokyo-night.toml"
+]
+
 [font]
 normal = { family = "CommitMono Nerd Font", style = "Regular" }
-size = 14
+size = 16
 
 [window]
 dimensions = { columns = 150, lines = 60 }
