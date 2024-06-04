@@ -1,4 +1,3 @@
 return {
-  colorscheme = "tokyonight-storm",
+  colorscheme = "catppuccin-macchiato",
 }
-

@@ -1,7 +1,0 @@
-{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"base16","version":"0.0.4"}
-{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"catppuccin","version":"0.2.2"}
-{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"git-firefly","version":"0.0.2"}
-{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"sql","version":"0.0.2"}
-{"signed_in":false,"milliseconds_since_first_event":1,"type":"Setting","setting":"theme","value":"Rosé Pine Moon"}
-{"signed_in":false,"milliseconds_since_first_event":1,"type":"Setting","setting":"keymap","value":"VSCode"}
-{"signed_in":false,"milliseconds_since_first_event":1,"type":"App","operation":"open"}
