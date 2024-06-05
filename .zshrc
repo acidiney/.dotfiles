@@ -49,6 +49,8 @@ alias wk="cd ~/labs/workspace"
 alias lps="cd ~/labs/personal"
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 
 
