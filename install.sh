@@ -11,6 +11,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt install zsh
 	chsh -s /bin/zsh
 
+	echo "installing ripgrep"
+	sudo apt-get install ripgrep
+
 	sudo apt install snapd
 	echo "Install Alacritty"
 	sudo snap install alacritty --classic
@@ -29,6 +32,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "installing brew"
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+	echo "installing ripgrep"
+	brew install ripgrep
+	
 	echo "installing zsh"
 	brew install zsh
 
