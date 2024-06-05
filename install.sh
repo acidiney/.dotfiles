@@ -1,14 +1,12 @@
 #!/bin/bash
 
-curl -fsSL https://fnm.vercel.app/install | bash
-
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt update
 
-	echo "installing zsh"
-	sudo apt install zsh
+	echo "installing zsh and unzip"
+	sudo apt install zsh unzip
 	chsh -s /bin/zsh
 
 	echo "installing ripgrep and fd"
@@ -75,3 +73,7 @@ ln -s ~/.config/antigen/ ~/.antigen
 
 mkdir -p ~/labs/personal/
 mkdir -p ~/labs/workspace
+
+curl -fsSL https://fnm.vercel.app/install | bash
+
+zsh
