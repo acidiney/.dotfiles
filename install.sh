@@ -28,13 +28,18 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo "installing tmux"
 	sudo apt install tmux
 
+	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+	tar xf lazygit.tar.gz lazygit
+	sudo install lazygit /usr/local/bin
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "installing brew"
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 	echo "installing ripgrep and fd"
 	brew install ripgrep fd
-	
+
 	echo "installing zsh"
 	brew install zsh
 
@@ -45,6 +50,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	echo "installing alacritty"
 	brew install --cask alacritty
+
+	brew install jesseduffield/lazygit/lazygit
+
+	brew install lazygit
 else
 	echo "OS not supported"
 fi
