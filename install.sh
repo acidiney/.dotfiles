@@ -76,4 +76,6 @@ mkdir -p ~/labs/workspace
 
 curl -fsSL https://fnm.vercel.app/install | bash
 
+fnm install --lts
+
 zsh
