@@ -83,11 +83,10 @@ fnm install --lts
 
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	zsh
+	zsh | goenv install 1.22 | goenv global 1.22 
+else
+	goenv install 1.22
+	goenv global 1.22
 fi
-goenv install 1.22
-
-goenv global 1.22
-
 
 zsh
