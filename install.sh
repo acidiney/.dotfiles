@@ -32,6 +32,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	tar xf lazygit.tar.gz lazygit
 	sudo install lazygit /usr/local/bin
 
+	git clone https://github.com/go-nv/goenv.git ~/.goenv
+
 	sudo snap install bottom
 
 	cd $HOME
@@ -44,8 +46,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "installing ripgrep and fd"
 	brew install ripgrep fd
 
-	echo "installing zsh"
-	brew install zsh
+	echo "installing zsh and goenv"
+	brew install zsh goenv
 
 	chsh -s /bin/zsh
 
@@ -76,6 +78,16 @@ mkdir -p ~/labs/workspace
 
 curl -fsSL https://fnm.vercel.app/install | bash
 
+
 fnm install --lts
+
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	zsh
+fi
+goenv install 1.22
+
+goenv global 1.22
+
 
 zsh
