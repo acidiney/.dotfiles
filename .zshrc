@@ -12,6 +12,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   FNM_PATH="$HOME/Library/Application Support/fnm"
 fi
 
+eval "$(fnm env)"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
