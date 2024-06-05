@@ -6,7 +6,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt update
 
 	echo "installing zsh and unzip"
-	sudo apt install zsh unzip
+	sudo apt install zsh unzip libnotify-bin
 	chsh -s /bin/zsh
 
 	echo "installing ripgrep and fd"
