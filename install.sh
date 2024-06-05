@@ -25,12 +25,18 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt install tmux
 
 	echo "installing lazygit and bottom"
+
+	sudo mkdir /tmp
+	cd /tmp
+
 	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 	tar xf lazygit.tar.gz lazygit
 	sudo install lazygit /usr/local/bin
 
 	sudo snap install bottom
+
+	cd $HOME
 
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -55,6 +61,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "installing lazygit and bottom"
 	brew install jesseduffield/lazygit/lazygit
 	brew install lazygit bottom
+
+	cd $HOME
 else
 	echo "OS not supported"
 fi
