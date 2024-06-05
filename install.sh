@@ -53,7 +53,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	brew install jesseduffield/lazygit/lazygit
 
-	brew install lazygit
+	brew install lazygit bottom
 else
 	echo "OS not supported"
 fi
