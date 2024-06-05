@@ -11,11 +11,11 @@ return {
       pickers = {
         find_files = {
           theme = "ivy",
-        }
+        },
       },
       defaults = {
         -- git_worktrees = vim.g.git_worktrees,
-        -- file_ignore_patterns = { "node_modules/", ".*/" },
+        file_ignore_patterns = { "node_modules/" },
         prompt_prefix = get_icon("Selected", 1),
         selection_caret = get_icon("Selected", 1),
         path_display = { "truncate" },
