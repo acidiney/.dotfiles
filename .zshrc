@@ -7,11 +7,10 @@ antigen use oh-my-zsh
 # fnm
  
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  FNM_PATH="~/.local/share/fnm"
+  FNM_PATH="$HOME/.local/share/fnm"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  FNM_PATH="~/Library/Application Support/fnm"
+  FNM_PATH="$HOME/Library/Application Support/fnm"
 fi
-eval "$(fnm env)"
 
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
