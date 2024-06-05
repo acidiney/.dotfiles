@@ -83,10 +83,14 @@ fnm install --lts
 
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	zsh | goenv install 1.22 | goenv global 1.22 
-else
-	goenv install 1.22
-	goenv global 1.22
+	echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.bash_profile
+	echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+	echo 'eval "$(goenv init -)"' >> ~/.bash_profile
+
+	source ~/.bash_profile
 fi
+
+goenv install 1.22
+goenv global 1.22
 
 zsh
