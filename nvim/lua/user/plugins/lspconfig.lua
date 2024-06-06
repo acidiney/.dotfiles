@@ -1,5 +1,6 @@
 
 return {
+ {
  "AstroNvim/astrolsp",
  opts = {
   setup_handlers = {
@@ -15,6 +16,13 @@ return {
           filetypes = {'typescript', 'javascript', 'vue'}
         }
         end,   },
+ }
+ },
+ {
+"williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "tsserver", "lua_ls", "volar", "gopls"}, -- automatically install lsp
+    },
  }
 }
 
