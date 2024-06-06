@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt install snapd
 
 	echo "Install Alacritty"
-	sudo snap install alacritty authy nvim --classic
+	sudo snap install alacritty authy nvim surfshark --classic
 
 	cd /tmp
 
@@ -37,7 +37,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	chsh -s /bin/zsh
 
 	echo "installing alacritty"
-	brew install --cask alacritty bitwarden
+	brew install --cask alacritty bitwarden surfshark
 
 else
 	echo "OS not supported"
