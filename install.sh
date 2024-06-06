@@ -8,7 +8,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt update
 
 	echo "installing zsh"
-	sudo apt install zsh
+	sudo apt install zsh tmux
+
 	chsh -s /bin/zsh
 
 	echo "installing ripgrep and fd"
@@ -25,9 +26,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	mv nvim.appimage /opt/nvim/nvim
 	echo "export PATH="$PATH:/opt/nvim/"" >>~/.zshrc
 
-	echo "installing tmux"
-	sudo apt install tmux
-
 	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 	tar xf lazygit.tar.gz lazygit
@@ -37,23 +35,15 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "installing brew"
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	echo "installing ripgrep and fd"
-	brew install ripgrep fd
-
-	echo "installing zsh"
-	brew install zsh
+	echo "installing deps"
+	brew install jesseduffield/lazygit/lazygit
+	brew install ripgrep fd zsh nvim tmux lazygit bottom
 
 	chsh -s /bin/zsh
 
-	echo "installing nvim and tmux"
-	brew install nvim tmux
-
 	echo "installing alacritty"
-	brew install --cask alacritty
+	brew install --cask alacritty bitwarden
 
-	brew install jesseduffield/lazygit/lazygit
-
-	brew install lazygit bottom
 else
 	echo "OS not supported"
 fi
