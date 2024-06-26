@@ -51,6 +51,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	echo "installing wezterm"
 	brew install --cask wezterm bitwarden surfshark
+	
+	echo "Installing yabai and skhd"
+	brew install koekeishiya/formulae/skhd
+	brew install koekeishiya/formulae/yabai
 
 else
 	echo "OS not supported"
@@ -67,6 +71,10 @@ ln -s $WORKDIR/fonts ~/.fonts
 mkdir -p ~/.config
 
 ln -s $WORKDIR/nvim ~/.config/nvim
+
+ln -s $WORKDIR/yabai ~/.config/yabai
+
+ln -s $WORKDIR/skhd ~/.config/skhd
 
 ln -s $WORKDIR/.wezterm.lua ~/.wezterm.lua
 
@@ -87,6 +95,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo 'eval "$(goenv init -)"' >>~/.bash_profile
 
 	source ~/.bash_profile
+else
+	 yabai --start-service
+	 skhd --start-service
 fi
 
 goenv install 1.22
