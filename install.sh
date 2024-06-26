@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+WORKDIR=$(pwd)
+echo $WORKDIR
+return
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -10,8 +15,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo chsh -s /bin/zsh
 	sudo apt install snapd
 
-	echo "Install Alacritty"
-	sudo snap install alacritty authy nvim surfshark --classic
+	echo "Install nvim"
+	sudo snap install authy nvim surfshark --classic
 
 	cd /tmp
 
@@ -21,6 +26,14 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo install lazygit /usr/local/bin
 
 	git clone https://github.com/go-nv/goenv.git ~/.goenv
+
+	echo "Installing Wezterm"
+	curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+	echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+
+	sudo apt update
+	sudo apt install wezterm
+
 
 	sudo snap install bottom
 
@@ -36,20 +49,22 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	chsh -s /bin/zsh
 
-	echo "installing alacritty"
-	brew install --cask alacritty bitwarden surfshark
+	echo "installing wezterm"
+	brew install --cask wezterm bitwarden surfshark
 
 else
 	echo "OS not supported"
 fi
 
-ln -s ~/.config/.tmux.conf ~/.tmux.conf
+ln -s $WORKDIR/.tmux.conf ~/.tmux.conf
 
-ln -s ~/.config/.zshrc ~/.zshrc
+ln -s $WORKDIR/.zshrc ~/.zshrc
 
-ln -s ~/.config/antigen/ ~/.antigen
+ln -s $WORKDIR/antigen/ ~/.antigen
 
-ln -s ~/.config/fonts ~/.fonts
+ln -s $WORKDIR/fonts ~/.fonts
+
+ln -s $WORKDIR/.wezterm.lua ~/.wezterm.lua
 
 fc-cache -vf ~/.fonts
 

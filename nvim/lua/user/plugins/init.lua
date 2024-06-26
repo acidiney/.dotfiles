@@ -6,7 +6,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      style = "night",
+      style = "storm",
       terminal_colors = true,
       -- transparent = true,
       styles = {
