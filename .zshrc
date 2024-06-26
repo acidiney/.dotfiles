@@ -1,5 +1,5 @@
-source ~/.config/nah.sh
-source ~/.config/antigen/antigen.zsh
+source ~/.dotfiles/nah.sh
+source ~/.dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh

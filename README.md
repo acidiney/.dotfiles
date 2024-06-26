@@ -17,7 +17,7 @@ Please install `FiraCode Nerd Font` in your system
 
 It will install
 
-- Alacritty
+- WezTerm
 - Nvim
 - Tmux
 - brew (MacOnly)
@@ -38,9 +38,9 @@ mv .config .config.bak
 mv .zshrc .zshrc.bak
 mv .bash_profile .bash_profile.bak
 
-# Clone repo as .config
+# Clone repo as .dotfiles
 
-$ git clone https://github.com/acidiney/dotfiles.git .config
+$ git clone https://github.com/acidiney/dotfiles.git .dotfiles
 
 $ cd .config
 
