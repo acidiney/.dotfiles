@@ -27,8 +27,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle MichaelAquilina/zsh-auto-notify
-# antigen bundle mafredri/zsh-async
-# antigen bundle marszall87/lambda-pure
 
 antigen theme zthxxx/jovial
 antigen bundle zthxxx/jovial
