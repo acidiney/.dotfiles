@@ -12,6 +12,9 @@ config.window_padding = {
 	bottom = 0,
 }
 
+config.term = "xterm-256color"
+config.window_background_opacity = 0.9
+
 config.default_prog = { "/usr/local/bin/tmux", "-l" }
 
 config.font = wezterm.font_with_fallback({
