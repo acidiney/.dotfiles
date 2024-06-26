@@ -64,6 +64,10 @@ ln -s $WORKDIR/antigen/ ~/.antigen
 
 ln -s $WORKDIR/fonts ~/.fonts
 
+mkdir -p ~/.config
+
+ln -s $WORKDIR/nvim ~/.config/nvim
+
 ln -s $WORKDIR/.wezterm.lua ~/.wezterm.lua
 
 fc-cache -vf ~/.fonts
