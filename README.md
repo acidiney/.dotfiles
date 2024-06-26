@@ -57,16 +57,16 @@ To install these dotfiles on your system, follow these steps:
     mv .bash_profile .bash_profile.bak
     ```
 
-2. **Clone the repository** into your home directory (assuming your current directory is your home directory):
+2. **Clone the repository** into your home directory:
 
     ```bash
-    git clone https://github.com/acidiney/dotfiles.git .dotfiles
+    git clone https://github.com/acidiney/dotfiles.git ~/.dotfiles
     ```
 
 3. **Navigate to the `.config` directory**:
 
     ```bash
-    cd .dotfiles
+    cd ~/.dotfiles
     ```
 
 4. **Run the installation script**:
