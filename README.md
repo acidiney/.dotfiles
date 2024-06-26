@@ -4,6 +4,7 @@
 
 ![Terminal 1](./term_01.png)
 ![Terminal 2](./term_02.png)
+![Terminal 3](./term_03.png)
 
 ## Font
 
