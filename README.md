@@ -1,6 +1,4 @@
-Certainly! Here's an expanded version of your dotfiles repository documentation with more details about the tools you use:
 
----
 
 # My dotfiles
 
@@ -9,7 +7,8 @@ Certainly! Here's an expanded version of your dotfiles repository documentation 
 
 ## Font
 
-Please make sure to install `FiraCode Nerd Font` and `Operator Mono` on your system. This font is specifically tailored for programming and includes additional glyphs useful for developers.
+- FiraCode Nerd Font ( as fallback )
+- Operator Mono
 
 ## Supported Operating Systems
 
