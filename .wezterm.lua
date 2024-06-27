@@ -19,9 +19,9 @@ config.window_decorations = "RESIZE"
 config.default_prog = { "/usr/local/bin/tmux", "-l" }
 
 config.font = wezterm.font_with_fallback({
-	"Operator Mono",
+	"Operator Mono Lig",
 	"Fira Code Nerd Font",
-}, { weight = "Regular" })
+}, { weight = "Book" })
 
 config.font_size = 13
 
