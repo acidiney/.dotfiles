@@ -31,4 +31,4 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Surfshark$" manage=off
 yabai -m rule --add app="^Docker Desktop$" manage=off
 yabai -m rule --add app="^Calculadora$" manage=off
-yabai -m rule --add app="^Karabiner-Elements$" manage=off
+
