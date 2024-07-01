@@ -13,15 +13,16 @@ config.window_padding = {
 }
 
 config.term = "xterm-256color"
-config.window_background_opacity = 0.9
-config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.99
 
-config.default_prog = { "/usr/local/bin/tmux", "-l" }
+-- config.default_prog = { "/usr/local/bin/tmux" }
 
-config.font = wezterm.font_with_fallback({
-	"Operator Mono Lig",
-	"Fira Code Nerd Font",
-}, { weight = "Book" })
+-- config.font = wezterm.font_with_fallback({
+-- 	"Operator Mono Lig",
+-- 	"Fira Code Nerd Font",
+-- }, { weight = "Regular" })
+
+config.font = wezterm.font("Operator Mono")
 
 config.font_size = 13
 
