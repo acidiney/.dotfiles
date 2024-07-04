@@ -2,7 +2,9 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
+config.color_scheme = "Tokyo Night Storm"
+
 config.hide_tab_bar_if_only_one_tab = true
 
 config.window_padding = {
@@ -24,6 +26,9 @@ config.window_background_opacity = 0.99
 
 config.font = wezterm.font("Operator Mono")
 
-config.font_size = 13
+-- config.font = wezterm.font("Fira Code")
+
+config.font_size = 16
+config.line_height = 2
 
 return config
