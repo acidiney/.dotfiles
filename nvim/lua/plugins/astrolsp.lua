@@ -44,11 +44,11 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "pyright",
-      "tsserver",
-      "lua_ls",
-      "volar",
-      "gopls",
+      -- "pyright",
+      -- "tsserver",
+      -- "lua_ls",
+      -- "volar",
+      -- "gopls",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields

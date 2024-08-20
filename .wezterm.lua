@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- config.color_scheme = "Tokyo Night"
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Abernathy"
 
 config.hide_tab_bar_if_only_one_tab = true
 
@@ -15,18 +15,18 @@ config.window_padding = {
 }
 
 config.term = "xterm-256color"
-config.window_background_opacity = 0.99
+-- config.window_background_opacity = 0.99
 
 -- config.default_prog = { "/usr/local/bin/tmux" }
 
 config.font = wezterm.font_with_fallback({
-	"Operator Mono",
+	"Monoflow",
 	"Fira Code Nerd Font",
 }, { weight = "Regular" })
 
 -- config.font = wezterm.font("Fira Code")
 
-config.font_size = 16
+-- config.font_size = 14
 config.line_height = 2
 
 return config
